@@ -1,5 +1,39 @@
 @import "variables";
 
+@mixin title {
+    margin: 0;
+    font-family: "Yeseva One", "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 37px;
+    text-transform: uppercase;
+    color: $basic;
+}
+
+@mixin subtitle {
+    font-family: "Yeseva One";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+}
+
+@mixin row1 {
+    margin-bottom: 34px;
+}
+
+@mixin row2 {
+    margin-bottom: 44px;
+}
+
+@mixin column ($width) {
+    width: $width;
+}
+
 body {
     max-width: 1440px;
     font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
@@ -11,28 +45,6 @@ body {
 
     * {
       box-sizing: border-box;
-    }
-
-    .title {
-        margin: 0;
-        font-family: "Yeseva One", "Times New Roman", serif;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 27px;
-        line-height: 37px;
-        text-transform: uppercase;
-        color: $basic;
-    }
-
-    .subtitle {
-        font-family: "Yeseva One";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 28px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #181818;
     }
 
     .completed {
@@ -71,7 +83,7 @@ body {
                     font-size: 14px;
                     line-height: 19px;
                     text-transform: uppercase;
-                    color: rgba(255, 255, 255, 0.3);
+                    color: rgba(255, 255, 255, 0.5);
                     text-decoration: none;
                     cursor: pointer;
 
@@ -95,6 +107,8 @@ body {
                     flex-direction: column;
 
                     .completed__text__descr__title {
+                        @include title;
+
                         width: 253px;
                         letter-spacing: -0.07em;
                         margin-top: 0;
@@ -110,14 +124,21 @@ body {
                     }
 
                     .completed-flex-container {
+                        @include row1;
+                        @include row2;
+                       
                         display: flex;
                         max-width: 403px;
                         height: 73px;
 
                         .completed-flex-item {
+                            @include column(185px);
+
                             margin-right: 29px;
 
                             h3 {
+                                @include subtitle;
+
                                 font-size: 18px;
                                 line-height: 25px;
                                 text-transform: uppercase;
@@ -133,22 +154,6 @@ body {
                                 width: 100px;
                             }
                         }
-
-                        .column1 {
-                            width: 185px;
-                        }
-
-                        .column2 {
-                            width: 213px;
-                        }
-                    }
-
-                    .row1 {
-                        margin-bottom: 34px;
-                    }
-
-                    .row2 {
-                        margin-bottom: 44px;
                     }
 
                     .completed__text__arrows {

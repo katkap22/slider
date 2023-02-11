@@ -1,0 +1,23 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-css": "sass scss/base.scss css/base.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katkap22/slider.git"
+  },
+  "author": "Ekaterina Kopylova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katkap22/slider/issues"
+  },
+  "homepage": "https://github.com/katkap22/slider#readme",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
